@@ -32,7 +32,7 @@ public class tablasController {
 	public void CambioDerecha(ActionEvent event) {
 		String uno = (String) LVCandidates.getSelectionModel().getSelectedItem();
 
-		if (!uno.isEmpty()) {
+		if (uno != null) {
 			data.remove((String) LVCandidates.getSelectionModel().getSelectedItem());
 			data2.add(uno);
 //			LVCandidates.setItems(this.data);
@@ -44,7 +44,7 @@ public class tablasController {
 	public void CambioIzquierda(ActionEvent event) {
 
 		String dos = (String) LVSelected.getSelectionModel().getSelectedItem();
-		if (!dos.isEmpty()) {
+		if (dos != null) {
 			data.add(dos);
 			data2.remove((String) LVSelected.getSelectionModel().getSelectedItem());
 //			LVCandidates.setItems(this.data);
